@@ -213,7 +213,6 @@ main{
 main .img-main{
     display: flex;
     justify-content: center;
-    position: relative;
     width: 100%;
     height: 60vh;
     margin: 20px 0;
@@ -223,22 +222,15 @@ main .img-main{
 }
 
 main h3{
-    font-size: 50px;
+    font-size: 70px;
     font-family: "Inter", sans-serif;
-    color: var(--background);
+    color: var(--link);
     padding: 0 30px;
 }
 main .text-1{
-    text-align: right;
-    position: absolute;
-    top: 0;
-    right: 50px;
-}
-main .text-2{
-    text-align: left;
-    position: absolute;
-    bottom: 0;
-    left: 50px;
+    display: flex;
+    align-items: center;
+    text-align: center;
 }
 div.line-3{
     width: 100%;
@@ -252,13 +244,12 @@ aside{
     text-align: center;
     align-items: center;
     width: 100%;
-    height: 650px;
-    margin-top: 100px;
+    height: 750px;
     background-color: var(--cinza);
 }
 aside .about-coffee{
     width: 700px;
-    height: 500px;
+    height: auto;
     padding: 0 30px;
     margin: 10px 0;
     display: flex;
@@ -267,7 +258,7 @@ aside .about-coffee{
     flex-direction: column;
 }
 aside .about-coffee img{
-    padding: 20px;
+    padding: 30px;
 }
 aside .about-coffee h2{
     padding: 5px;
@@ -284,8 +275,8 @@ aside .img-about{
     display: flex;
     justify-content: center;
     width: 100%;
-    margin: 15px 0;
-    gap: 90px;
+    margin: 50px 0;
+    gap: 70px;
 }
 footer {
     background-color: var(--orange);
@@ -294,6 +285,7 @@ footer {
 .container {
     width: 100%;
     height: 300px;
+    font-family: "Inter", sans-serif;
 }
 ul{
     list-style: none;
@@ -301,6 +293,8 @@ ul{
 .row {
     display: flex;
     flex-wrap: wrap;
+    width: 100%;
+    padding-top: 40px;
 }
   
 .column {
@@ -314,10 +308,10 @@ ul{
     text-align: left;
 }
 .column h3{
-    font-size: 18px;
+    font-size: 20px;
     color: var(--background);
     text-transform: capitalize;
-    margin-bottom: 30px;
+    margin-bottom: 35px;
     position: relative;
 }
 .column h3::before{
@@ -330,4 +324,39 @@ ul{
     width: 50px;
     box-sizing: border-box;
 }
-
+.column ul li:not(:last-child){
+    margin-bottom: 10px;
+}
+.column ul li a{
+    font-size: 17px;
+    text-transform: capitalize;
+    color: var(--cinza);
+    text-decoration: none;
+    display: block;
+    font-weight: 200;
+    transition: all 0.5 ease;
+}
+.column ul li a:hover{
+    color: var(--link);
+    padding-left: 5px;
+}
+.column .social-icons{
+    display: flex;
+    flex-wrap: wrap;
+}
+.column .social-icons a{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: var(--cinza);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: var(--green);
+    transition: all 0.5 ease;
+}
+.column .social-icons a:hover{
+    color: var(--link);
+    background-color: var(--link--component);
+}
